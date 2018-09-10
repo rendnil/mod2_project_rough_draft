@@ -1,0 +1,18 @@
+<h1>Start Game</h1>
+
+
+<h3>Player Hand</h3>
+<%= @new_game.player_hand %>
+<br>
+Total: <%= @new_game.hand_total(@new_game.player_hand) %>
+<%= button_to "Hit", game_path %>
+
+<%= button_to "Stay", game_path %>
+<br>
+
+
+
+<h3>Dealer Hand</h3>
+<%= "#{@new_game.dealer_hand[0]}, Hidden" %>
+<br>
+Total: <%= @new_game.hand_total(@new_game.dealer_hand) %>
